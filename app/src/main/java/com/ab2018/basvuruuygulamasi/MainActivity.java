@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
     Spinner city;
     String sehir="Ankara";
 
- //test 
+ //test
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +78,12 @@ public class MainActivity extends Activity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int index, long l) {
 
-               sehir = view.toString();
+                if (index==0)
+                    sehir="Ankara";
+                else if (index==1)
+                    sehir="İzmir";
+                else
+                    sehir="Karabük";
 
             }
 
