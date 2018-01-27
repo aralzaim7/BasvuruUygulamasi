@@ -22,8 +22,8 @@ public class MainActivity extends Activity {
     //test
     Calendar myCalendar;
     DatePickerDialog.OnDateSetListener date;
-    RadioButton maleBtn, femaleBtn;
     EditText name,email,bday;
+    RadioButton maleBtn, femaleBtn;
     CheckBox attended;
     Spinner city;
     String sehir="Ankara";
@@ -43,6 +43,7 @@ public class MainActivity extends Activity {
         city = findViewById(R.id.citySpn);
         maleBtn = findViewById(R.id.maleRd);
         femaleBtn = findViewById(R.id.femaleRd);
+        attended = findViewById(R.id.chckbox);
 
         city = (Spinner) findViewById(R.id.citySpn);
 
