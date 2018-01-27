@@ -19,7 +19,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class MainActivity extends Activity {
-
+    //test
     Calendar myCalendar;
     DatePickerDialog.OnDateSetListener date;
     RadioButton maleBtn, femaleBtn;
