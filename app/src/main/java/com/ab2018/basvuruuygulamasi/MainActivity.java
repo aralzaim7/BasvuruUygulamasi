@@ -132,8 +132,6 @@ public class MainActivity extends Activity {
             makeAndShowDialogBox(msg);
 
         }
-
-
     }
 
     private void makeAndShowDialogBox(String message) {
