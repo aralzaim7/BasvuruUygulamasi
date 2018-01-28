@@ -6,6 +6,7 @@ import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+
 import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -45,7 +46,7 @@ public class MainActivity extends Activity {
         femaleBtn = findViewById(R.id.femaleRd);
         attended = findViewById(R.id.chckbox);
 
-        city = (Spinner) findViewById(R.id.citySpn);
+        city = findViewById(R.id.citySpn);
 
 
         date = new DatePickerDialog.OnDateSetListener() {
@@ -59,13 +60,12 @@ public class MainActivity extends Activity {
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                 updateLabel();
             }
-
-        };
+         };
 
         bday.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                 // TODO Auto-generated method stub
                 new DatePickerDialog(MainActivity.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
@@ -79,12 +79,17 @@ public class MainActivity extends Activity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int index, long l) {
 
-                if (index==0)
-                    sehir="Ankara";
-                else if (index==1)
-                    sehir="İzmir";
-                else
-                    sehir="Karabük";
+                   sehir = city.getSelectedItem().toString();
+
+
+                // if (index==0)
+                //sehir="Ankara";
+
+                //else if (index==1)
+                 //   sehir="İzmir";
+
+                //else
+                    //sehir="Karabük";
 
             }
 
@@ -95,7 +100,7 @@ public class MainActivity extends Activity {
     }
 
     private void updateLabel() {
-        String myFormat = "dd/MM/yy"; //In which you need put here
+        String myFormat = "dd/MM/yyyy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
         bday.setText(sdf.format(myCalendar.getTime()));

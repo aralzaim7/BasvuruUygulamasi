@@ -43,7 +43,8 @@
         android:id="@+id/bdayEt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Doğum Tarihiniz"/>
+        android:hint="Doğum Tarihiniz"
+        android:focusable="false"/>
 
     <Spinner
         android:id="@+id/citySpn"
@@ -80,7 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Daha önce Akademik Bilişim'e katıldınız mı?"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:buttonTint="@color/ColorBlue"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
